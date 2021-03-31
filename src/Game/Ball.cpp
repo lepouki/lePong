@@ -85,7 +85,7 @@ void Ball::Reset(const Vector2i& winSize) noexcept
 
 bool Ball::IsBehind(const Paddle& paddle) const noexcept
 {
-    // We don't use the whole radius to avoid the ball from going through the paddle.
+    // We don't use the whole radius to prevent the ball from going through the paddle.
     // This means we don't cover all possible situations but this is good enough.
     const auto kOuterEdge = position.x + (radius * 0.25f) * -paddle.forward;
 
